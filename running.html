@@ -1,0 +1,20 @@
+<h1>Running Status</h1>
+<div class="row">
+    <div class="col-md-3">
+        <form  ng-submit="get_train_status(t)">
+             <div class="form-group">
+                  <input type="text" placeholder="Train No" ng-model="t.train_no" required class="form-control"> 
+             </div>
+            <div class="form-group">
+                  <input type="date" placeholder="Date" ng-model="t.src_date" required class="form-control"> 
+                  <h5 style="color:red">** Date the train starting from the source **</h5>
+             </div>
+            <div class="form-group">
+                  <input type="submit" value="Status" class="btn btn-success"> 
+             </div>
+        </form>
+    </div>
+    <div class="col-md-4">
+        {{data}}
+    </div>
+</div>

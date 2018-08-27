@@ -1,0 +1,49 @@
+#main
+{
+    background-color: #ffffff;
+    margin: 0px;
+}
+
+
+.member_details_div
+{
+    background-color:#81C784;
+    border-radius: 3px;
+    padding : 10px 20px;
+    margin-bottom: 30px;
+    color:#fff;
+    font-size : 22px;
+    font-family:sans-serif
+}
+
+.details_div
+{
+   padding: 20px 30px;
+    border-radius: 4px;
+    background-color:#fff;
+    width:95%;
+    margin: auto;
+}
+.footer
+{
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.footer #menu-link {
+    list-style: none;
+    padding: 25px;
+    margin: 0;
+    text-align: center;
+    color: black;
+    font-size : 18px;
+}
+
+#menu-link li{
+    display: inline-block;
+}
+
+#menu-link li a
+{
+    padding : 10px;
+}

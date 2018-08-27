@@ -1,0 +1,326 @@
+<div id="outside">
+    <div id="main" ng-init="face='1'">
+
+        <div class="container-fluid" style="padding:50px">
+            <div class="row">
+            	
+                 
+                 <!-- About Me (Left Sidebar) Start -->
+                 <div class="col-md-3">
+                    
+                   <div class="about-fixed">
+                     <div class="my-pic text-center">
+                        <div class="profile_image">
+                            <img src="images/ppimage.jpg" class="img-circle">
+                         
+                         </div>
+                         
+                     </div>
+                      
+                      
+                      
+                      <div class="my-detail">
+                        <div class="white-spacing">
+                            <h1>Welcome, {{name}}</h1>
+                            <h5>{{email}}</h5>
+                        </div> 
+                          <div class="sidebar_link" >
+                          <ul>
+                              
+                                          <li>
+                                            <input ng-model="myVar" value="1"  type="radio" >
+                                            <label for="f-option">By Hobbies</label>
+
+                                            <div class="check"></div>
+                                          </li>
+
+                                          <li>
+                                            <input ng-model="myVar" value="2" type="radio"  >
+                                            <label  for="s-option">By Profession</label>
+
+                                            <div class="check"><div class="inside"></div></div>
+                                          </li>
+
+                                          <li>
+                                            <input ng-model="myVar" value="3" type="radio">
+                                            <label for="t-option">Neighbourhood</label>
+
+                                            <div class="check"><div class="inside"></div></div>
+                                          </li>
+                              
+                                            <li>
+                                            <input ng-click="logout()" type="radio">
+                                            <label for="t-option">Logout</label>
+
+                                            <div class="check"><div class="inside"></div></div>
+                                          </li>
+                                        </ul>
+
+                        </div>
+                       
+                    </div>
+                  </div>
+                </div>
+                <!-- About Me (Left Sidebar) End -->
+                
+                
+                
+                
+                 
+                 <!-- Blog Post (Right Sidebar) Start -->
+                 <div class="col-md-9" ng-init="myVar='1'">
+                    <div class="col-md-12 page-body">
+                    	<div class="row">
+                            <div ng-switch="myVar">
+                                
+                                <div ng-switch-when="1">
+                                    <h1 align="center" style="color:#000;font-weight:bold;font-variant: small-caps;">Associate Yourself On The Basis Of Hobbies</h1>
+                                    
+                                    <form ng-submit="find_hobby(myhobby_1,myhobby_2,myhobby_3)">
+                                        <div class="col-md-4">
+                                        <h4 class="hobby_heading">First Hobby <span>*</span></h4>
+                                            <div class="form-group">
+                                                <select ng-model="myhobby_1" class="form-control">
+                                                    <option value="Reading">Reading</option>
+                                                    <option value="Gardening">Gardening</option>
+                                                    <option value="Camping/Backpacking">Camping/Backpacking</option>
+                                                    <option value="Hunting">Hunting</option>
+                                                    <option value="Sports">Sports</option>
+                                                    <option value="Archery">Archery</option>
+                                                    <option value="Martial Arts">Martial Arts</option>
+                                                    <option value="Hiking">Hiking</option>
+                                                    <option value="Photography">Photography</option>
+                                                    <option value="Cooking">Cooking</option>
+                                                    <option value="Card Playing">Card Playing</option>
+                                                    <option value="Blogging">Blogging</option>
+                                                    <option value="Programming">Programming</option>
+                                                    <option value="Bike Reading">Bike Riding</option>
+                                                </select>
+                                            </div>
+                                    </div>
+                                
+                                <div class="col-md-4">
+                    
+                                        <h4 class="hobby_heading">Second Hobby <span>*</span></h4>
+                                            <div class="form-group">
+                                                <select ng-model="myhobby_2" class="form-control">
+                                                    <option value="Reading">Reading</option>
+                                                    <option value="Gardening">Gardening</option>
+                                                    <option value="Camping/Backpacking">Camping/Backpacking</option>
+                                                    <option value="Hunting">Hunting</option>
+                                                    <option value="Sports">Sports</option>
+                                                    <option value="Archery">Archery</option>
+                                                    <option value="Martial Arts">Martial Arts</option>
+                                                    <option value="Hiking">Hiking</option>
+                                                    <option value="Photography">Photography</option>
+                                                    <option value="Cooking">Cooking</option>
+                                                    <option value="Card Playing">Card Playing</option>
+                                                    <option value="Blogging">Blogging</option>
+                                                    <option value="Programming">Programming</option>
+                                                    <option value="Bike Reading">Bike Riding</option>
+                                                </select>
+                                            </div>
+                                
+                            </div>
+                                    <div class="col-md-4">
+                                
+                                        <h4 class="hobby_heading">Third Hobby <span>*</span></h4>
+                                            <div class="form-group">
+                                                <select ng-model="myhobby_3" class="form-control">
+                                                    <option value="Reading">Reading</option>
+                                                    <option value="Gardening">Gardening</option>
+                                                    <option value="Camping/Backpacking">Camping/Backpacking</option>
+                                                    <option value="Hunting">Hunting</option>
+                                                    <option value="Sports">Sports</option>
+                                                    <option value="Archery">Archery</option>
+                                                    <option value="Martial Arts">Martial Arts</option>
+                                                    <option value="Hiking">Hiking</option>
+                                                    <option value="Photography">Photography</option>
+                                                    <option value="Cooking">Cooking</option>
+                                                    <option value="Card Playing">Card Playing</option>
+                                                    <option value="Blogging">Blogging</option>
+                                                    <option value="Programming">Programming</option>
+                                                    <option value="Bike Reading">Bike Riding</option>
+                                                </select>
+                                            </div>
+                                    
+                            </div>
+                                    
+                                    <br>
+                                        <div class="row">
+                                            <div class="col-md-4"></div>
+                                            <div class="col-md-4">
+                                                 <input type="submit" class="btn btn-danger btn-block" value="Find">
+                                            </div>
+                                            <div class="col-md-4"></div>
+                                        </div>
+                                   
+                                </form>
+                                    
+                                    <div class="row">
+                            <div class="col-md-12" ng-show="friends_div">
+                                <div class="details_div">
+                                    <div class="member_details_div" ng-repeat="x in friends_data">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{x.first_name +" " +x.lastname}}
+                                                <br>
+                                                <span style="font-size:14px;color:#fff">{{x.email}}</span>
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{x.pcity}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                 <button class="btn btn-primary pull-right">Add Friend</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                                    
+                            </div>
+                                
+                        <div ng-switch-when="2">
+                            
+                             <h1 align="center" style="color:#000;font-weight:bold;font-variant: small-caps;">Associate Yourself On The Basis Of Profession</h1>
+                            
+                            <form ng-submit = "job(company,dept)">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" ng-model="company"  style="width:95%;margin-left:15px"  class="form-control" placeholder = "Company Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-center">
+                                    <div class="form-group">
+                                        <input type="text" ng-model="dept" style="width:95%" align="center" class="form-control" placeholder = "Department Name">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-4">
+                                    <input type="submit" value="Search" class="btn btn-danger btn-block">
+                                </div>
+                                <div class="col-md-4"></div>
+                            </div>
+                            </form>
+                            
+                            
+                            <div class="row">
+                            <div class="col-md-12" ng-show="jobs_div">
+                                <div class="details_div">
+                                    <div class="member_details_div" ng-repeat="x in jobinfo">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <h3>{{x.first_name}}</h3>
+                                                <h5>{{x.email}}</h5>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <h4>{{x.companyname}}</h4>
+                                                <h5>{{x.designation}}</h5>
+                                                <h5>{{x.departmentname}}</h5>
+                                            </div>
+                                            <div class="col-md-3">
+                                                 <button class="btn btn-primary btn-lg pull-right">Add Friend</button>
+                                            </div>
+                                        </div>
+                                        
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                            
+                            
+                        </div>
+                            
+                            
+                        <div ng-switch-when="3">
+                             <form ng-submit = "apartment(apartmentno,block)">
+                            <div class="row">
+                                <h1 align="center" style="color:#000;font-weight:bold;font-variant: small-caps;">
+                                    Get Your Locality Info
+                                </h1>
+                                <br>
+                                <div class="col-md-6">
+                                    
+                                    <div class="form-group">
+                                        <input type="text" ng-model="apartmentno" style="width:95%;margin-left:15px"  class="form-control" placeholder = "Apartment Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        
+                                        <select ng-model="block" class="form-control" style="width:95%" align="center">
+                                                    <option value="A">A</option>
+                                                    <option value="B">B</option>
+                                                    <option value="C">C</option>
+                                                    <option value="D">D</option>
+                                                </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-4">
+                                    <input type="submit" value="Search" class="btn btn-danger btn-block">
+                                </div>
+                                <div class="col-md-4"></div>
+                            </div>
+                            </form>
+                        </div>  
+                                        <div class="row">
+                            <div class="col-md-12" ng-show="apart_div">
+                                    <div class="details_div">
+                                    <div class="member_details_div" ng-repeat="x in apart_members">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <h4>Flat No:{{x.home_id}}</h4>
+                                                {{x.owner_name}}
+                                                <span style="font-size:14px;color:#fff">{{x.Email}}</span>
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{x.Profession}}
+                                                <br>
+                                            </div>
+                                            <div class="col-md-4">
+                                                 <span style="font-size:16px;color:#fff">Contact:&nbsp;{{x.Contact_no}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="footer">
+                        
+                                  <ul id="menu-link">
+                                       <li><a href="">Home</a></li>
+                                       <li><a href="">About</a></li>
+                                       <li><a href="">Work</a></li>
+                                       <li><a href="#!/contacts">Contact</a></li>
+                                    </ul>
+
+                                  <p>© Copyright 2016 Uniters. All rights reserved</p>
+
+                               </div>
+                       <!-- Footer End -->
+                        
+                        
+                  </div>
+                
+            </div>
+         </div>
+      </div>
+    
+     </div>
+</div>
